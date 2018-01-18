@@ -25,12 +25,8 @@ class Song
     @@genre[genre] << genre_value
   end
 
-  def name
+  def self.artist_count(artist_value, artist)
+    @@artists[artist] ||= []
+    @@artists[artist] << artist_value
   end
-
-  def self.artists
-  end
-
-
-
 end
