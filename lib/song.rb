@@ -26,18 +26,25 @@ class Song
     @@genres.uniq
   end
 
-  def self.genre_count(genre_value, genre)
-    @@genre[genre] ||= []
-    @@genre[genre] << genre_value
-  end
-
-  def self.artist_count(artist_value, artist)
-    artist_count = {}
-    @@artists. each do |artist|
+  def self.genre_count
+    genre_count = {}
+    @@genres.each do |artist|
       if artist_count[artist]
         artist_count[artist] += 1
       else
         artist_count[artist] = 1
       end
+      artist_count
+  end
+
+  def self.artist_count
+    artist_count = {}
+    @@artists.each do |artist|
+      if artist_count[artist]
+        artist_count[artist] += 1
+      else
+        artist_count[artist] = 1
+      end
+      artist_count
   end
 end
